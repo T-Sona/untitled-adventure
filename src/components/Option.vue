@@ -1,5 +1,5 @@
 <template>
-  <v-flex md6>
+  <v-flex>
     <div
       class="button option"
       :class="{

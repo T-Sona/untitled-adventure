@@ -5,6 +5,7 @@
       <v-flex class="input-options">
         <v-layout wrap>
           <Option
+            class="md6"
             v-for="(option, index) in options"
             v-bind:key="`option_${index}`"
             :data="option"
@@ -17,7 +18,7 @@
 </template>
 
 <script>
-import Option from "../Option.vue";
+import Option from "./Option";
 
 export default {
   name: "UserInput",

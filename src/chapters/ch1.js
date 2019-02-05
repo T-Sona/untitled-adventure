@@ -3,13 +3,13 @@ import { Option } from "@/class/Option";
 
 const id = "1";
 const text = [
-  "Lorem ipsum dolor sit amet, eum ut soleat facilis senserit, an facete aperiri albucius nec. Ex duis praesent his. Eu doming accommodare est. Te choro ornatus usu, sit feugiat nominavi probatus et, mel rebum animal convenire et.",
+  "'<player:name>!'",
+  "'Hey, <player:name>!'",
+  "'Where are you? Come down here and help me secure the cargo!'",
+  "You can hear your fahthers footsteps coming closer and decide relucantly, that it would be the best to open your eyes and start getting dressed, before your father finds his way to your cabin. 'Whats all this fuzz about,...' you ask yourself quietly while putting on your working garb.",
   "",
-  "At modo interpretaris per, sit summo delectus ocurreret at. Sea dicunt aperiri ad, nostrud phaedrum ea per. Ea amet nusquam instructior qui, ei integre docendi his. Ad quodsi feugait ius, ad eam unum erroribus, ne per consul repudiandae delicatissimi. ",
-  "At delenit suavitate eam, vis quando impetus prompta in, ipsum petentium vis te. His impetus utroque atomorum no, vim epicuri detraxit id.",
-  "",
-  "Accusata signiferumque nec ne. Solum volumus antiopam ut quo, velit vocibus complectitur te nec. Ea vim harum adipiscing, expetenda gloriatur definiebas ei vis. In vis choro delenit, duo ad consul putent. Ad animal constituto vel.",
-  "Has et mucius fuisset voluptaria. An pri modo posidonium quaerendum, tincidunt consectetuer eam ad, cu malis phaedrum facilisis pri. His in meis equidem, vix in semper essent, unum prompta accumsan no duo."
+  "Just when you finished tying your bandana, the door to your room is crashing open. 'You where still sleeping <if:player:gender:boy>boy<else>girl<end>?!', your father asks aghast, 'the crew is up for hours, we nearly reached the <TODO: NAME FOR DANGEROUS PART OF RIVER>' ",
+  "TODO, Story: say sorry, grab your bag and follow dad. Help him with his stuff, then comes one bigger task and you have to decide what to do."
 ];
 
 const opt1 = new Option("okay", player => {

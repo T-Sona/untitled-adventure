@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import OptionComponent from "@/components/default/Option";
+import OptionComponent from "@/components/Option";
 import { Option } from "@/class/Option";
 import { mapActions } from "vuex";
 

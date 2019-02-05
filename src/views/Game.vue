@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <v-layout>
+    <v-layout v-if="chapter">
       <v-flex md9>
         <Output :text="chapter.text" @printed="printed = true" />
         <UserInput
@@ -10,7 +10,9 @@
           @click="printed = false"
         />
       </v-flex>
-      <v-flex md3></v-flex>
+      <v-flex md3>
+        <CharacterBar :player="player" />
+      </v-flex>
     </v-layout>
   </div>
 </template>
@@ -18,14 +20,18 @@
 <script>
 import { mapGetters } from "vuex";
 
-import Output from "@/components/default/output/Output.vue";
-import UserInput from "@/components/default/user/UserInput.vue";
+import CharacterBar from "@/components/CharacterBar";
+import Output from "@/components/Output";
+import UserInput from "@/components/UserInput";
 
 export default {
   name: "game",
-  components: { Output, UserInput },
+  components: { CharacterBar, Output, UserInput },
   computed: {
-    ...mapGetters("game", { chapter: "getCurrentChapter" })
+    ...mapGetters("game", {
+      chapter: "getCurrentChapter",
+      player: "getCurrentPlayer"
+    })
   },
   beforeUpdate() {
     if (!this.chapter) {

@@ -29,17 +29,38 @@
         ({{ skillPoints }} skill points left)
       </div>
       <v-flex>
-        <v-layout column>
-          <div v-for="skill in Object.keys(skills)" v-bind:key="skill">
-            {{ skill }}: {{ skills[skill] }}
-          </div>
+        <v-layout justify-space-between>
+          <Skill
+            class="md3"
+            v-for="skill in Object.keys(skills)"
+            v-bind:key="skill"
+            :add="skillPoints <= 0"
+            :name="skill"
+            :remove="skills[skill] == 0"
+            @add="
+              skills[skill]++;
+              skillPoints--;
+            "
+            @remove="
+              skills[skill]--;
+              skillPoints++;
+            "
+          >
+            {{ skills[skill] }}
+          </Skill>
         </v-layout>
       </v-flex>
 
       <v-flex>
-        <v-layout>
-          <Option :data="cancel" secondary :disabled="!name || !gender" />
-          <Option :data="go" :disabled="!name || !gender" />
+        <v-layout class="actions">
+          <v-spacer />
+          <Option
+            class="md2"
+            :data="cancel"
+            secondary
+            :disabled="!name || !gender"
+          />
+          <Option class="md2 ok-btn" :data="go" :disabled="!name || !gender" />
         </v-layout>
       </v-flex>
     </v-layout>
@@ -47,14 +68,15 @@
 </template>
 
 <script>
-import OptionComponent from "@/components/default/Option";
+import OptionComponent from "@/components/Option";
+import AddRemoveComponent from "@/components/AddRemove";
 import { Option } from "@/class/Option";
 import { Character, Skills } from "@/class/Character";
 import { mapActions } from "vuex";
 
 export default {
   name: "new-game",
-  components: { Option: OptionComponent },
+  components: { Skill: AddRemoveComponent, Option: OptionComponent },
   data() {
     return {
       name: "",
@@ -84,14 +106,18 @@ export default {
 };
 </script>
 <style scoped>
+.ui {
+  padding: 1.5rem;
+}
+
 h2 {
   display: inline-block;
-  padding: 1rem;
   padding-bottom: 0;
 }
+
 .txt-input {
-  margin: 0.5rem 1rem 0.5rem 1rem;
   width: calc(100% - 2rem);
+  margin-bottom: 1rem;
 }
 
 .gender {
@@ -107,7 +133,15 @@ h2 {
 .gender img:hover {
   opacity: 0.8;
 }
+
 .is-active {
   opacity: 1 !important;
+}
+.actions {
+  margin-top: 2rem;
+}
+
+.ok-btn {
+  margin-right: -0.5rem;
 }
 </style>
