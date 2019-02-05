@@ -1,4 +1,4 @@
-import { Chapter } from "@/class/story/Chapter";
+import { Chapter } from "@/class/Chapter";
 import { Option } from "@/class/Option";
 
 const id = "1";
@@ -13,12 +13,12 @@ const text = [
 ];
 
 const opt1 = new Option("okay", player => {
-  player.str++;
+  player.skills.str++;
   return "2";
 });
 
 const opt2 = new Option("Wouldn't it be easier to do it like this?", player => {
-  player.int++;
+  player.skills.int++;
   return "2";
 });
 

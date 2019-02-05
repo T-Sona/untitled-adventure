@@ -29,7 +29,11 @@
         ({{ skillPoints }} skill points left)
       </div>
       <v-flex>
-        <v-layout></v-layout>
+        <v-layout column>
+          <div v-for="skill in Object.keys(skills)" v-bind:key="skill">
+            {{ skill }}: {{ skills[skill] }}
+          </div>
+        </v-layout>
       </v-flex>
 
       <v-flex>
@@ -45,7 +49,7 @@
 <script>
 import OptionComponent from "@/components/default/Option";
 import { Option } from "@/class/Option";
-import { Player } from "@/class/characters/Player";
+import { Character, Skills } from "@/class/Character";
 import { mapActions } from "vuex";
 
 export default {
@@ -56,8 +60,11 @@ export default {
       name: "",
       gender: "",
       skillPoints: 10,
-      str: 0,
-      int: 0,
+      skills: {
+        str: 0,
+        int: 0,
+        agi: 0
+      },
       go: new Option("GO", this.createGame),
       cancel: new Option("CANCEL", () => "home")
     };
@@ -65,7 +72,11 @@ export default {
   methods: {
     ...mapActions("game", ["updatePlayer"]),
     createGame() {
-      this.updatePlayer(new Player(this.name, this.gender));
+      let skills = new Skills();
+      Object.keys(this.skills).forEach(skill => {
+        skills[skill] = this.skills[skill];
+      });
+      this.updatePlayer(new Character(this.name, this.gender, skills));
       this.$router.push("game");
       return "1";
     }
