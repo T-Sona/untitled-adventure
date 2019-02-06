@@ -1,4 +1,4 @@
-importScripts("precache-manifest.bbf5fe228381bc7ef4c9c8f442da7bf2.js", "https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
+importScripts("/untitled-adventure/precache-manifest.8e88307b5a3fff1d997c2017e17dc0cf.js", "https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 import workbox from "workbox";
 
