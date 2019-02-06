@@ -44,12 +44,12 @@ self.__precacheManifest = [
     "url": "index.html"
   },
   {
-    "revision": "b6216d61c03e6ce0c9aea6ca7808f7ca",
-    "url": "robots.txt"
-  },
-  {
     "revision": "5a1b69b77bb93a4bed1573bdf83a64a7",
     "url": "service-worker.js"
+  },
+  {
+    "revision": "b6216d61c03e6ce0c9aea6ca7808f7ca",
+    "url": "robots.txt"
   },
   {
     "revision": "194bb6e848c03d5d240e19f911eeeff6",
