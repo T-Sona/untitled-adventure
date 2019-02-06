@@ -10,8 +10,11 @@ export default {
     getCurrentPlayer: state => state.currentPlayer
   },
   actions: {
-    async toChapter({ commit }, chapterString) {
-      const chapter = await chapters[`ch${chapterString}`];
+    async toChapter({ commit, state }, chapterString) {
+      const getChapter = chapters[`ch${chapterString}`];
+      const chapter = getChapter(state.currentPlayer);
+      console.log(state.currentPlayer);
+      console.log(chapter);
       if (chapter) {
         commit("setChapter", chapter);
       }
