@@ -1,12 +1,19 @@
 <template>
   <v-container fluid id="app">
     <v-flex id="header" class="ui">
-      <div id="logo">
-        <img src="./assets/logo.png" />
-      </div>
-      <div>
-        Untitled Adventure
-      </div>
+      <v-layout class="fl-left">
+        <div id="logo">
+          <img src="./assets/logo.png" />
+        </div>
+        <div>
+          Untitled Adventure
+        </div>
+      </v-layout>
+      <v-flex class="fl-right" hidden-md-and-up>
+        <div class="button menu-btn">
+          <img class="menu-icon" src="./assets/menu_male.png" alt="menu" />
+        </div>
+      </v-flex>
     </v-flex>
     <router-view />
   </v-container>
@@ -23,6 +30,30 @@ export default {
 };
 </script>
 <style>
+.fl-left {
+  float: left;
+}
+.fl-right {
+  float: right;
+}
+
+.menu-btn {
+  width: 3rem;
+  height: 3rem;
+  display: table;
+  background-color: rgba(200, 200, 200, 0.3);
+}
+.menu-btn:hover {
+  background-color: rgba(200, 200, 200, 0.5);
+}
+
+.menu-icon {
+  display: table-cell;
+  vertical-align: middle;
+  margin-left: calc(50% - 1.25rem);
+  max-height: 2.5rem;
+}
+
 #app {
   background-color: rgb(44, 42, 39) !important;
   height: 100%;

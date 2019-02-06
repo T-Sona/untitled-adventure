@@ -11,6 +11,7 @@ function getChapter(player) {
     `Just when you finished tying your bandana, the door to your room is crashing open. 'You where still sleeping ${
       player.gender === "male" ? "boy" : "girl"
     }?!', your father asks aghast, 'the crew is up for hours, we nearly reached the <TODO: NAME FOR DANGEROUS PART OF RIVER>' `,
+    "",
     "TODO, Story: say sorry, grab your bag and follow dad. Help him with his stuff, then comes one bigger task and you have to decide what to do."
   ];
 

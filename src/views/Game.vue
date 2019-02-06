@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <v-layout v-if="chapter">
-      <v-flex md9>
+      <v-flex xs12 md9>
         <Output :text="chapter.text" @printed="printed = true" />
         <UserInput
           :active="printed"
@@ -10,7 +10,7 @@
           @click="printed = false"
         />
       </v-flex>
-      <v-flex md3>
+      <v-flex hidden-sm-and-down md3>
         <CharacterBar :player="player" />
       </v-flex>
     </v-layout>

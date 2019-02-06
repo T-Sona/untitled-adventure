@@ -29,9 +29,9 @@
         ({{ skillPoints }} skill points left)
       </div>
       <v-flex>
-        <v-layout justify-space-between>
+        <v-layout justify-space-between wrap>
           <Skill
-            class="md3"
+            class="xs12 md3"
             v-for="skill in Object.keys(skills)"
             v-bind:key="skill"
             :add="skillPoints <= 0"
@@ -54,12 +54,7 @@
       <v-flex>
         <v-layout class="actions">
           <v-spacer />
-          <Option
-            class="md2"
-            :data="cancel"
-            secondary
-            :disabled="!name || !gender"
-          />
+          <Option class="md2" :data="cancel" secondary />
           <Option class="md2 ok-btn" :data="go" :disabled="!name || !gender" />
         </v-layout>
       </v-flex>

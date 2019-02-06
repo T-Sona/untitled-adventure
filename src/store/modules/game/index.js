@@ -13,8 +13,7 @@ export default {
     async toChapter({ commit, state }, chapterString) {
       const getChapter = chapters[`ch${chapterString}`];
       const chapter = getChapter(state.currentPlayer);
-      console.log(state.currentPlayer);
-      console.log(chapter);
+
       if (chapter) {
         commit("setChapter", chapter);
       }
