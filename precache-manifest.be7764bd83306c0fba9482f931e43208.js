@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "24e8fd64d1681d34995b",
-    "url": "/untitled-adventure/css/app.7d461fd3.css"
+    "revision": "53ebcfa2d61760aedf94",
+    "url": "/untitled-adventure/css/app.22154f34.css"
   },
   {
-    "revision": "24e8fd64d1681d34995b",
-    "url": "/untitled-adventure/js/app.ebd08b15.js"
+    "revision": "53ebcfa2d61760aedf94",
+    "url": "/untitled-adventure/js/app.071ba6b7.js"
   },
   {
     "revision": "16d4c21570f47a022e70",
@@ -20,6 +20,10 @@ self.__precacheManifest = [
     "url": "/untitled-adventure/js/chunk-vendors.4d929120.js"
   },
   {
+    "revision": "bf4957fe16a6cbaa0470fb3064cbf256",
+    "url": "/untitled-adventure/img/menu.bf4957fe.png"
+  },
+  {
     "revision": "a21e77ff5183e5d6c7e41a64e4d96ffd",
     "url": "/untitled-adventure/img/equip.a21e77ff.png"
   },
@@ -32,10 +36,6 @@ self.__precacheManifest = [
     "url": "/untitled-adventure/img/male.1debf376.png"
   },
   {
-    "revision": "bc5b6f192c779af132cafc8716c15351",
-    "url": "/untitled-adventure/img/menu_male.bc5b6f19.png"
-  },
-  {
     "revision": "b652ccf05248e5e1450bbf5b54a00be9",
     "url": "/untitled-adventure/img/bag.b652ccf0.png"
   },
@@ -44,7 +44,7 @@ self.__precacheManifest = [
     "url": "/untitled-adventure/img/logo.d2461ebd.png"
   },
   {
-    "revision": "8f5489fada3212cdcc04303b312f5450",
+    "revision": "996c941025b62326b33c9be7448dd61d",
     "url": "/untitled-adventure/index.html"
   },
   {
