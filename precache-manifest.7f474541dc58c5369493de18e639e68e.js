@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "31bd216fa960d76e3c8f",
-    "url": "/untitled-adventure/css/app.789cc07e.css"
+    "revision": "24e8fd64d1681d34995b",
+    "url": "/untitled-adventure/css/app.7d461fd3.css"
   },
   {
-    "revision": "31bd216fa960d76e3c8f",
-    "url": "/untitled-adventure/js/app.eee15417.js"
+    "revision": "24e8fd64d1681d34995b",
+    "url": "/untitled-adventure/js/app.ebd08b15.js"
   },
   {
-    "revision": "9ebe8b189e0129d6805e",
-    "url": "/untitled-adventure/js/chunk-2d0e5e97.e9ffe8bc.js"
+    "revision": "16d4c21570f47a022e70",
+    "url": "/untitled-adventure/js/chunk-2d0e5e97.dd22c08b.js"
   },
   {
     "revision": "e342c78e8a755258923d",
@@ -32,6 +32,10 @@ self.__precacheManifest = [
     "url": "/untitled-adventure/img/male.1debf376.png"
   },
   {
+    "revision": "bc5b6f192c779af132cafc8716c15351",
+    "url": "/untitled-adventure/img/menu_male.bc5b6f19.png"
+  },
+  {
     "revision": "b652ccf05248e5e1450bbf5b54a00be9",
     "url": "/untitled-adventure/img/bag.b652ccf0.png"
   },
@@ -40,16 +44,16 @@ self.__precacheManifest = [
     "url": "/untitled-adventure/img/logo.d2461ebd.png"
   },
   {
-    "revision": "2df06d50d030ed2d24bc2102afe8b64c",
+    "revision": "8f5489fada3212cdcc04303b312f5450",
     "url": "/untitled-adventure/index.html"
-  },
-  {
-    "revision": "5a1b69b77bb93a4bed1573bdf83a64a7",
-    "url": "/untitled-adventure/service-worker.js"
   },
   {
     "revision": "b6216d61c03e6ce0c9aea6ca7808f7ca",
     "url": "/untitled-adventure/robots.txt"
+  },
+  {
+    "revision": "5a1b69b77bb93a4bed1573bdf83a64a7",
+    "url": "/untitled-adventure/service-worker.js"
   },
   {
     "revision": "194bb6e848c03d5d240e19f911eeeff6",
