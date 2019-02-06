@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "9af63ad4a44a6ccc6b4e",
-    "url": "/untitled-adventure/css/app.0dd236c9.css"
+    "revision": "3532232a96e4bd3943d4",
+    "url": "/untitled-adventure/css/app.e40bae97.css"
   },
   {
-    "revision": "9af63ad4a44a6ccc6b4e",
-    "url": "/untitled-adventure/js/app.096468a7.js"
+    "revision": "3532232a96e4bd3943d4",
+    "url": "/untitled-adventure/js/app.0d7e1340.js"
   },
   {
     "revision": "9ebe8b189e0129d6805e",
@@ -40,7 +40,7 @@ self.__precacheManifest = [
     "url": "/untitled-adventure/img/logo.d2461ebd.png"
   },
   {
-    "revision": "53628e0bb2da27a57655abe55fb40223",
+    "revision": "53ef3793052bd54a826dc97435ee2da1",
     "url": "/untitled-adventure/index.html"
   },
   {
