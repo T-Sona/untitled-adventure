@@ -30,3 +30,19 @@ export default new Router({
     }
   ]
 });
+
+function getNavigationGuard(store) {
+  return (to, from, next) => {
+    if (
+      to.path === "/game" &&
+      (!store.getters["game/getCurrentPlayer"] ||
+        !store.getters["game/getCurrentChapter"])
+    ) {
+      next("/");
+    } else {
+      next();
+    }
+  };
+}
+
+export { getNavigationGuard };

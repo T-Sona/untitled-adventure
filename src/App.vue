@@ -3,15 +3,19 @@
     <v-flex id="header" class="ui">
       <v-layout class="fl-left">
         <div id="logo">
-          <img src="./assets/logo.png" />
+          <a href="">
+            <img src="./assets/logo.png" />
+          </a>
         </div>
-        <div>
-          Untitled Adventure
+        <div @click="$router.push('')">
+          <a href="">
+            Untitled Adventure
+          </a>
         </div>
       </v-layout>
       <v-flex class="fl-right" hidden-md-and-up>
-        <div class="button menu-btn">
-          <img class="menu-icon" src="./assets/menu_male.png" alt="menu" />
+        <div v-if="ingame" class="button menu-btn">
+          <img class="menu-icon" src="./assets/menu.png" alt="menu" />
         </div>
       </v-flex>
     </v-flex>
@@ -22,14 +26,20 @@
 <script>
 export default {
   name: "App",
-  data() {
-    return {
-      //
-    };
+  computed: {
+    ingame() {
+      console.log(this.$route.path === "/game");
+      return this.$route.path === "/game";
+    }
   }
 };
 </script>
 <style>
+a {
+  color: unset;
+  text-decoration: unset;
+}
+
 .fl-left {
   float: left;
 }
@@ -41,10 +51,10 @@ export default {
   width: 3rem;
   height: 3rem;
   display: table;
-  background-color: rgba(200, 200, 200, 0.3);
+  background-color: rgba(200, 200, 200, 0.5) !important;
 }
 .menu-btn:hover {
-  background-color: rgba(200, 200, 200, 0.5);
+  background-color: rgba(250, 250, 250, 0.5) !important;
 }
 
 .menu-icon {
@@ -61,6 +71,8 @@ export default {
   position: absolute;
   top: 0;
   width: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 #header {

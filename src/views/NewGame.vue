@@ -94,7 +94,6 @@ export default {
         skills[skill] = this.skills[skill];
       });
       this.updatePlayer(new Character(this.name, this.gender, skills));
-      this.$router.push("game");
       return "1";
     }
   }

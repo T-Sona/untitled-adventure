@@ -122,12 +122,12 @@ p {
 }
 
 .button {
-  background-color: rgba(200, 200, 200, 0.3);
+  background-color: rgba(200, 200, 200, 0.5);
   margin-left: calc(50% - 2rem);
 }
 
 .button:hover {
-  background-color: rgba(200, 200, 200, 0.5);
+  background-color: rgba(250, 250, 250, 0.5);
 }
 
 .mt2 {

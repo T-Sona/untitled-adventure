@@ -1,9 +1,11 @@
 import Vue from "vue";
 import "./plugins/vuetify";
 import App from "./App.vue";
-import router from "./router";
+import router, { getNavigationGuard } from "./router";
 import store from "./store";
 import "./registerServiceWorker";
+
+router.beforeEach(getNavigationGuard(store));
 
 Vue.config.productionTip = false;
 

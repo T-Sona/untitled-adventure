@@ -38,10 +38,10 @@ export default {
   methods: {
     ...mapActions("game", ["toChapter"]),
     clicked() {
-      this.$emit("click");
       var nextChapter = this.data.action(this.player);
       if (nextChapter && nextChapter !== "home") {
         this.toChapter(nextChapter);
+        this.$router.push("game");
       } else if (nextChapter === "home") {
         this.$router.push("/");
       }
