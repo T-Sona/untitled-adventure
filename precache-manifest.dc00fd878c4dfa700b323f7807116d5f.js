@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "03028d5028557c3879d1",
+    "revision": "ff7f428bc18c74560972",
     "url": "/untitled-adventure/css/app.30fd6318.css"
   },
   {
-    "revision": "03028d5028557c3879d1",
-    "url": "/untitled-adventure/js/app.ac272793.js"
+    "revision": "ff7f428bc18c74560972",
+    "url": "/untitled-adventure/js/app.ef309014.js"
   },
   {
-    "revision": "16d4c21570f47a022e70",
-    "url": "/untitled-adventure/js/chunk-2d0e5e97.dd22c08b.js"
+    "revision": "177c5ee12b9d560bdecd",
+    "url": "/untitled-adventure/js/chunk-2d0e5e97.aeb38ad8.js"
   },
   {
     "revision": "e342c78e8a755258923d",
@@ -44,16 +44,16 @@ self.__precacheManifest = [
     "url": "/untitled-adventure/img/logo.d2461ebd.png"
   },
   {
-    "revision": "97be7af64cdff13f12a8c7387196bc8b",
+    "revision": "200f898d386742442ac5dbf348f78356",
     "url": "/untitled-adventure/index.html"
-  },
-  {
-    "revision": "5a1b69b77bb93a4bed1573bdf83a64a7",
-    "url": "/untitled-adventure/service-worker.js"
   },
   {
     "revision": "b6216d61c03e6ce0c9aea6ca7808f7ca",
     "url": "/untitled-adventure/robots.txt"
+  },
+  {
+    "revision": "5a1b69b77bb93a4bed1573bdf83a64a7",
+    "url": "/untitled-adventure/service-worker.js"
   },
   {
     "revision": "194bb6e848c03d5d240e19f911eeeff6",
