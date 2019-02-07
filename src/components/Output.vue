@@ -29,7 +29,7 @@ export default {
           () => {
             this.writeFirst(text.substring(1));
           },
-          /[.,?!\n]/.test(first) ? 10 : 0
+          /[.,?!\n]/.test(first) ? 0 : 0
         );
       } else {
         this.$emit("printed");

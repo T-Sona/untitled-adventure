@@ -5,7 +5,8 @@ import router, { getNavigationGuard } from "./router";
 import store from "./store";
 import "./registerServiceWorker";
 
-router.beforeEach(getNavigationGuard(store));
+const middleware = getNavigationGuard(store);
+router.beforeEach(middleware);
 
 Vue.config.productionTip = false;
 

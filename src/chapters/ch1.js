@@ -24,7 +24,17 @@ function getChapter(player) {
     return "2";
   });
 
-  return new Chapter("1", text, [opt1, opt2]);
+  const opt3 = new Option("NEIN", () => {
+    player.skills.str++;
+    return "2";
+  });
+
+  const opt4 = new Option("Fuck off!", () => {
+    player.skills.int++;
+    return "2";
+  });
+
+  return new Chapter("1", text, [opt1, opt2, opt3, opt4]);
 }
 
 export default getChapter;

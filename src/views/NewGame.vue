@@ -33,10 +33,10 @@
           <Skill
             class="xs12 md3"
             v-for="skill in Object.keys(skills)"
-            v-bind:key="skill"
+            :key="skill"
             :add="skillPoints <= 0"
-            :name="skill"
             :remove="skills[skill] == 0"
+            :name="skill"
             @add="
               skills[skill]++;
               skillPoints--;
@@ -50,7 +50,6 @@
           </Skill>
         </v-layout>
       </v-flex>
-
       <v-flex>
         <v-layout class="actions">
           <v-spacer />

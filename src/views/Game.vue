@@ -1,10 +1,10 @@
 <template>
   <div class="main">
-    <v-layout v-if="chapter">
+    <v-layout>
       <v-flex xs12 md9>
         <Output :text="chapter.text" @printed="printed = true" />
         <UserInput
-          :active="printed"
+          v-if="printed"
           :text="chapter.optionText"
           :options="chapter.options"
           @click="printed = false"

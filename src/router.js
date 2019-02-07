@@ -9,11 +9,6 @@ Vue.use(Router);
 export default new Router({
   routes: [
     {
-      path: "/game",
-      name: "game",
-      component: Game
-    },
-    {
       path: "/",
       name: "home",
       component: Home
@@ -22,6 +17,11 @@ export default new Router({
       path: "/new",
       name: "new-game",
       component: NewGame
+    },
+    {
+      path: "/game",
+      name: "game",
+      component: Game
     },
     {
       path: "/not-found",
