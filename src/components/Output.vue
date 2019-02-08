@@ -53,7 +53,7 @@ export default {
 </script>
 <style scoped>
 .output {
-  height: 30rem;
+  min-height: 30rem;
   margin-bottom: 15px;
 }
 p {

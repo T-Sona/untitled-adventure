@@ -115,10 +115,10 @@ h2 {
 
 .gender {
   text-align: center;
-  cursor: pointer;
 }
 
 .gender img {
+  cursor: pointer;
   opacity: 0.4;
   max-height: 15rem;
 }
