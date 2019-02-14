@@ -1,23 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "8c61e3094ae58346a43c",
-    "url": "/untitled-adventure/css/app.f56b1ada.css"
+    "revision": "1379d03578c438e3b89a",
+    "url": "/untitled-adventure/css/app.2cd13e80.css"
   },
   {
-    "revision": "8c61e3094ae58346a43c",
-    "url": "/untitled-adventure/js/app.b643ab73.js"
+    "revision": "1379d03578c438e3b89a",
+    "url": "/untitled-adventure/js/app.09238eab.js"
   },
   {
-    "revision": "5c564fc7cc31b886e786",
-    "url": "/untitled-adventure/js/chunk-2d0e5e97.8b973ee4.js"
+    "revision": "89b3be81c0604f0ba1e7",
+    "url": "/untitled-adventure/js/chunk-2d0e5e97.6e8c03f7.js"
   },
   {
-    "revision": "e342c78e8a755258923d",
+    "revision": "6d06bc98a1e345270dec",
     "url": "/untitled-adventure/css/chunk-vendors.417c1280.css"
   },
   {
-    "revision": "e342c78e8a755258923d",
-    "url": "/untitled-adventure/js/chunk-vendors.4d929120.js"
+    "revision": "6d06bc98a1e345270dec",
+    "url": "/untitled-adventure/js/chunk-vendors.ed4a01a2.js"
   },
   {
     "revision": "bf4957fe16a6cbaa0470fb3064cbf256",
@@ -44,16 +44,16 @@ self.__precacheManifest = [
     "url": "/untitled-adventure/img/logo.d2461ebd.png"
   },
   {
-    "revision": "e65bce94f107389937f9fe1a8e035a35",
+    "revision": "caaeb1b690608db2d0aad822901bd987",
     "url": "/untitled-adventure/index.html"
-  },
-  {
-    "revision": "5a1b69b77bb93a4bed1573bdf83a64a7",
-    "url": "/untitled-adventure/service-worker.js"
   },
   {
     "revision": "b6216d61c03e6ce0c9aea6ca7808f7ca",
     "url": "/untitled-adventure/robots.txt"
+  },
+  {
+    "revision": "5a1b69b77bb93a4bed1573bdf83a64a7",
+    "url": "/untitled-adventure/service-worker.js"
   },
   {
     "revision": "194bb6e848c03d5d240e19f911eeeff6",
