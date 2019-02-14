@@ -10,15 +10,20 @@ export default {
     getCurrentPlayer: state => state.currentPlayer
   },
   actions: {
-    async toChapter({ commit, state }, chapterString) {
+    toChapter({ commit, state }, chapterString) {
       const getChapter = chapters[`ch${chapterString}`];
       const chapter = getChapter(state.currentPlayer);
 
       if (chapter) {
+        window.sessionStorage.setItem("chapter", chapter.id);
         commit("setChapter", chapter);
+        return true;
+      } else {
+        return false;
       }
     },
     updatePlayer({ commit }, player) {
+      window.sessionStorage.setItem("player", JSON.stringify(player));
       commit("setPlayer", player);
     }
   },

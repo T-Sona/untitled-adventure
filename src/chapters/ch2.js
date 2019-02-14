@@ -3,16 +3,24 @@ import { Option } from "@/class/Option";
 
 function getChapter(player) {
   const text = [
-    `'${player.name}!'`,
-    `'Hey, ${player.name}!'`,
-    "'Where are you? Come down here and help me secure the cargo!'",
-    "You can hear your fahthers footsteps coming closer and decide relucantly, that it would be the best to open your eyes and start getting dressed, before your father finds his way to your cabin. 'Whats all this fuzz about,...' you ask yourself quietly while putting on your working garb.",
+    `You make your way down to the cargo hold, thinking about last night. You've been up late, playing dice with <Name>, the new scullion. When your Father hears about this, you will be done for. Your Father hates gambling${
+      player.gender === "male"
+        ? ""
+        : " and being a girl does not make things easier"
+    }. The reason you agreed to this in the first place, was to come to know <Name> better.`,
     "",
-    `Just when you finished tying your bandana, the door to your room is crashing open. 'You where still sleeping ${
-      player.gender === "male" ? "boy" : "girl"
-    }?!', your father asks aghast, 'the crew is up for hours, we nearly reached the <TODO: NAME FOR DANGEROUS PART OF RIVER>' `,
+    `He seems like a ${
+      player.gender === "male" ? "cool" : "nice"
+    } guy, but a bit dim-witted as well. He spend nearly two hours to convince you of some insane cospiracy about the High King. He is seriously believing, that the High King is harvesting power by enslaving some kind of monsters and supressing every oposition.`,
     "",
-    "TODO, Story: say sorry, grab your bag and follow dad. Help him with his stuff, then comes one bigger task and you have to decide what to do."
+    "Before you realize it, you arrive in the cargo hold where <Name> and the other crew mates are already securing the crates.",
+    `'${
+      player.name
+    }!', <Name> shouts over the noise of the working crew. 'Come here, we need your help!'`,
+    "You navigate your way through the crew, wondering what kind of task the guys need your help.",
+    `'Good Morning ${
+      player.name
+    }. I see, you're finaly awake.', he said smirking.`
   ];
 
   const opt1 = new Option("go back to ch1", () => {

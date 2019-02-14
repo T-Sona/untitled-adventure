@@ -3,38 +3,36 @@ import { Option } from "@/class/Option";
 
 function getChapter(player) {
   const text = [
-    `'${player.name}!'`,
-    `'Hey, ${player.name}!'`,
-    "'Where are you? Come down here and help me secure the cargo!'",
-    "You can hear your fahthers footsteps coming closer and decide relucantly, that it would be the best to open your eyes and start getting dressed, before your father finds his way to your cabin. 'Whats all this fuzz about,...' you ask yourself quietly while putting on your working garb.",
+    `'${player.name}?'`,
+    `Far to tired to answer your father, you turn around and pull your blanket over your head.`,
+    `'Hey, ${
+      player.name
+    }! Where are you? Come down here and help me secure the cargo!'`,
+    "You can hear your fahthers footsteps coming closer and decide relucantly, that it would be the best to get up and start getting dressed, before your father finds his way to your cabin. 'Whats all this fuzz about,...' you quietly mutter to yourself while putting on your garb.",
     "",
     `Just when you finished tying your bandana, the door to your room is crashing open. 'You where still sleeping ${
       player.gender === "male" ? "boy" : "girl"
-    }?!', your father asks aghast, 'the crew is up for hours, we nearly reached the <TODO: NAME FOR DANGEROUS PART OF RIVER>' `,
-    "TODO, Story: say sorry, grab your bag and follow dad. Help him with his stuff, then comes one bigger task and you have to decide what to do."
+    }?!', your father asks aghast, 'Hurry up and help <NAME> in the hold before I smack your lazy arse! The crew is up for hours, we nearly reached the <NAME> rapids...'`,
+    "Before your father your father could continue his lecture you grab your bag and squeze yourself out of your cabin, avoiding you fathers stares."
   ];
 
-  const opt1 = new Option("okay", () => {
-    player.skills.str++;
+  const optText = "While pasing your father, you ...";
+
+  const opt1 = new Option("quietly say sorry", () => {
+    player.reputation.father++;
     return "2";
   });
 
-  const opt2 = new Option("Wouldn't it be easier to do it like this?", () => {
-    player.skills.int++;
+  const opt2 = new Option("make an annoyed face", () => {
     return "2";
   });
 
-  const opt3 = new Option("NEIN", () => {
-    player.skills.str++;
+  const opt3 = new Option("curse quietly", () => {
+    player.reputation.father--;
     return "2";
   });
 
-  const opt4 = new Option("Fuck off!", () => {
-    player.skills.int++;
-    return "2";
-  });
-
-  return new Chapter("1", text, [opt1, opt2, opt3, opt4]);
+  return new Chapter("1", text, [opt1, opt2, opt3], optText);
 }
 
 export default getChapter;

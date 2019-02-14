@@ -3,7 +3,7 @@
     <v-layout justify-space-between column>
       <v-flex id="input-text">{{ text }}</v-flex>
       <v-flex class="input-options">
-        <v-layout wrap>
+        <v-layout justify-space-around wrap>
           <Option
             class="md6"
             v-for="(option, index) in options"

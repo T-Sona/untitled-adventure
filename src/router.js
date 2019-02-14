@@ -32,16 +32,34 @@ export default new Router({
 });
 
 function getNavigationGuard(store) {
-  return (to, from, next) => {
-    if (
-      to.path === "/game" &&
-      (!store.getters["game/getCurrentPlayer"] ||
-        !store.getters["game/getCurrentChapter"])
-    ) {
-      next("/");
-    } else {
-      next();
+  return (to, _, next) => {
+    if (to.path === "/game") {
+      const currentPlayer = store.getters["game/getCurrentPlayer"];
+
+      if (!currentPlayer) {
+        const player = JSON.parse(sessionStorage.getItem("player"));
+
+        if (!player) {
+          next("");
+        } else {
+          store.dispatch("game/updatePlayer", player);
+        }
+      }
+
+      const currentChapter = store.getters["game/getCurrentChapter"];
+
+      if (!currentChapter) {
+        const chapter = sessionStorage.getItem("chapter");
+        if (chapter) {
+          const success = store.dispatch("game/toChapter", chapter);
+
+          if (!success) {
+            next("");
+          }
+        }
+      }
     }
+    next();
   };
 }
 
